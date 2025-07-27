@@ -1,520 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrowGram | Organic Instagram Growth</title>
-    <style>
-        /* ==== Global Styles ==== */
-        :root {
-            --primary: #405DE6;
-            --purple: #833AB4;
-            --pink: #E1306C;
-            --red: #FD1D1D;
-            --orange: #F56040;
-            --yellow: #FFDC80;
-            --white: #FFFFFF;
-            --light-bg: #F8F9FA;
-            --dark-text: #262626;
-            --gray-text: #8E8E8E;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--light-bg);
-            color: var(--dark-text);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ==== Header & Navigation ==== */
-        header {
-            background: linear-gradient(45deg, var(--primary), var(--purple));
-            color: var(--white);
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--yellow);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        .cta-button {
-            background-color: var(--white);
-            color: var(--primary);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* ==== Hero Section ==== */
-        .hero {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary), var(--purple));
-            color: var(--white);
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .btn-primary {
-            background-color: var(--white);
-            color: var(--primary);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
-        }
-
-        /* ==== Features Section ==== */
-        .features {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: var(--dark-text);
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray-text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background-color: var(--light-bg);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 50px;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-
-        .feature-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--dark-text);
-        }
-
-        .feature-card p {
-            color: var(--gray-text);
-        }
-
-        /* ==== Testimonials ==== */
-        .testimonials {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background-color: var(--white);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--dark-text);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-
-        .author-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .author-info p {
-            font-style: normal;
-            color: var(--gray-text);
-            font-size: 14px;
-        }
-
-        /* ==== CTA Section ==== */
-        .cta-section {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--pink), var(--red));
-            color: var(--white);
-        }
-
-        .cta-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-
-        /* ==== Footer ==== */
-        footer {
-            background-color: var(--dark-text);
-            color: var(--white);
-            padding: 50px 0 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: var(--gray-text);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--white);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--gray-text);
-            font-size: 14px;
-        }
-
-        /* ==== Responsive Adjustments ==== */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FreeGram - Get 1000 Free Instagram Followers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#fdfbfb, #ebedee);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #e1306c;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #success {
+      display: none;
+      margin-top: 20px;
+      color: green;
+    }
+    #loading {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Grow<span>Gram</span></a>
-                <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#tools">Free Tools</a>
-                    <a href="#testimonials">Success Stories</a>
-                    <a href="#pricing">Pricing</a>
-                </div>
-                <a href="#" class="cta-button">Get Started</a>
-            </nav>
-        </div>
-    </header>
+  <div class="box">
+    <h2>🎉 Get 1000 Free Instagram Followers</h2>
+    <p>Enter your Instagram username below</p>
+    <input type="text" id="username" placeholder="@username" />
+    <button onclick="getFollowers()">Get Followers</button>
+    <div id="loading">⏳ Processing your request...</div>
+    <div id="success">✅ Success! You will receive followers in 1 min .</div>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Grow Your Instagram Organically</h1>
-            <p>Get real followers with proven strategies—no bots, no fake accounts. Just sustainable growth that works.</p>
-            <div class="hero-buttons">
-                <a href="#tools" class="btn-primary">Try Free Tools</a>
-                <a href="#pricing" class="btn-secondary">See Premium Plans</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>How We Help You Grow</h2>
-                <p>Our ethical approach focuses on real engagement and content that attracts your ideal audience.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Content Strategy</h3>
-                    <p>Learn what to post and when to post for maximum engagement and reach.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Hashtag Research</h3>
-                    <p>Discover the best hashtags to reach your target audience without shadowbans.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Engagement Training</h3>
-                    <p>Master the art of authentic comments and DMs that build real relationships.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Free Tools Section -->
-    <section class="features" id="tools" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Free Growth Tools</h2>
-                <p>Try our free Instagram optimization tools—no signup required.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏷️</div>
-                    <h3>Hashtag Generator</h3>
-                    <p>Generate high-performing hashtags tailored to your niche and post.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Profile Analyzer</h3>
-                    <p>Get instant feedback on your bio, highlights, and overall profile strength.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Best Time to Post</h3>
-                    <p>Calculate optimal posting times based on your audience's activity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Real Success Stories</h2>
-                <p>Don't take our word for it—here's what our users say about organic growth.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p>"I went from 200 to 5,000 followers in 3 months using GrowGram's strategies. The best part? My engagement rate actually improved!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K." class="author-avatar">
-                        <div class="author-info">
-                            <h4>Sarah K.</h4>
-                            <p>Travel Blogger</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"As a small business owner, I needed real customers—not fake followers. GrowGram helped me connect with my local community."</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James T." class="author-avatar">
-                        <div class="author-info">
-                            <h4>James T.</h4>
-                            <p>Bakery Owner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"The hashtag generator alone doubled my reach. Worth every penny for the premium plan!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya M." class="author-avatar">
-                        <div class="author-info">
-                            <h4>Priya M.</h4>
-                            <p>Fitness Coach</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Grow the Right Way?</h2>
-            <p>Join thousands of creators and businesses building authentic Instagram presence.</p>
-            <a href="#" class="btn-primary" style="background-color: var(--white); color: var(--pink);">Start Free Trial</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>GrowGram</h3>
-                    <p style="color: var(--gray-text); margin-top: 15px;">Ethical Instagram growth tools and education.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Guides</a></li>
-                        <li><a href="#">Webinars</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Compliance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2023 GrowGram. Not affiliated with Instagram or Meta. We do not provide fake followers or engagement.</p>
-            </div>
-        </div>
-    </footer>
+  <script>
+    function getFollowers() {
+      const username = document.getElementById('username').value;
+      if (username.trim() === "") {
+        alert("Please enter your Instagram username");
+        return;
+      }
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('success').style.display = 'block';
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
