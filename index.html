@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FreeGram - Get 1000 Free Instagram Followers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#fdfbfb, #ebedee);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #e1306c;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #success {
+      display: none;
+      margin-top: 20px;
+      color: green;
+    }
+    #loading {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🎉 Get 1000 Free Instagram Followers</h2>
+    <p>Enter your Instagram username below</p>
+    <input type="text" id="username" placeholder="@username" />
+    <button onclick="getFollowers()">Get Followers</button>
+    <div id="loading">⏳ Processing your request...</div>
+    <div id="success">✅ Success! You will receive followers in 24 hours.</div>
+  </div>
+
+  <script>
+    function getFollowers() {
+      const username = document.getElementById('username').value;
+      if (username.trim() === "") {
+        alert("Please enter your Instagram username");
+        return;
+      }
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('success').style.display = 'block';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
